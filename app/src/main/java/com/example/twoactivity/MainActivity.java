@@ -21,10 +21,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mReplyHeadTextView= findViewById(R.id.text_header_reply);
-        mReplyTextView = findViewById(R.id.text_message);
         setContentView(R.layout.activity_main);
         mMessageEditText = findViewById(R.id.editText_main);
+        mReplyHeadTextView= findViewById(R.id.text_header_reply);
+        mReplyTextView = findViewById(R.id.text_message_reply);
+
     }
     @Override
     public void onActivityResult(int requestCode,int resultCode, Intent data){
