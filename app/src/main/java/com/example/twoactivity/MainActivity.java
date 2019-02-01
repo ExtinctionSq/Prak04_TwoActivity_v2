@@ -81,4 +81,12 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "button is Clicked");
         startActivityForResult(intent,TEXT_REQUEST);
     }
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        if(mReplyHeadTextView.getVisibility()==View.VISIBLE){
+            outState.putBoolean("reply_visible",true);
+            outState.putString("reply_text",mReplyTextView.getText().toString());
+        }
+    }
 }
